@@ -1,1 +1,1 @@
-docker build -t ghcr.io/ros-joy-linux:humble .
+docker build -t ghcr.io/rosblox/ros-joy-linux:humble .
