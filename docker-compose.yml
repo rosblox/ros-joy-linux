@@ -1,0 +1,16 @@
+services:
+  ros-joy-linux:
+    image: ghcr.io/rosblox/ros-joy-linux:humble
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    network_mode: "host"
+    ipc: host
+    pid: host
+    volumes:
+      - /dev/input:/dev/input
+    environment:
+      - UID=${HOST_UID}
+      - ROS_DOMAIN_ID
+    command: su - ros --whitelist-environment=ROS_DOMAIN_ID /run.sh
