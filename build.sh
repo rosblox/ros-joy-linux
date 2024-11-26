@@ -4,4 +4,4 @@ export BUILDKIT_PROGRESS=plain
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-docker compose -f $SCRIPT_DIR/docker-compose.yml build docker build -t ghcr.io/rosblox/ros-joy-linux:humble .
+docker compose -f $SCRIPT_DIR/docker-compose.yml build
